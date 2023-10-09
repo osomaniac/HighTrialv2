@@ -1,0 +1,116 @@
+{
+    "model": "hightrial.breed",
+    "pk": 3,
+    "fields": {
+        "breedName": "Border Collie",
+        "colorGeneticFlags": {
+            "k": {
+                "KB": 60,
+                "ky": 30,
+                "kbr": 10
+            },
+            "a": {
+                "ay": 40,
+                "at": 50,
+                "a": 10
+            },
+            "e": {
+                "e": 10,
+                "E": 80,
+                "Em": 10
+            },
+            "b": {
+                "B": 70,
+                "b": 30
+            },
+            "d": {
+                "D": 80,
+                "d": 20
+            },
+            "m": {
+                "M": 30,
+                "m": 70
+            },
+            "s": {
+                "Sp": 20,
+                "S": 80
+            }
+        },
+        "traitGeneticFlags": null,
+        "nonFoundations": {
+            "s": [
+                "Sp/Sp"
+            ],
+            "m": [
+                "M/M"
+            ]
+        },
+        "phenotypeNames": {
+            "k": {
+                "ky": "seeA",
+                "kbr": "Brindle"
+            },
+            "a": {
+                "ay": "Sable",
+                "at": "Tan Points",
+                "a": "Black"
+            },
+            "e": {
+                "e": "Gold",
+                "Em": "Masked"
+            },
+            "b": {
+                "B": "Black",
+                "b": "Red"
+            },
+            "d": {
+                "D": "Black",
+                "d": "Blue"
+            },
+            "m": {
+                "M": "Merle"
+            },
+            "s": {
+                "Sp": " and White"
+            },
+            "joints": {
+                "b/d": "Lilac",
+                "d/M": "Slate",
+                "B/M": "Blue"
+            }
+        },
+        "dominanceValues": {
+            "k": [
+                "KB",
+                "kbr",
+                "ky"
+            ],
+            "a": [
+                "at",
+                "ay",
+                "a"
+            ],
+            "e": [
+                "E",
+                "Em",
+                "e"
+            ],
+            "b": [
+                "B",
+                "b"
+            ],
+            "d": [
+                "D",
+                "d"
+            ],
+            "m": [
+                "M",
+                "m"
+            ],
+            "s": [
+                "S",
+                "Sp"
+            ]
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{% extends 'dogs/base.html' %}
+{% load static %}
+
+{% block page_header %}
+    <h3>{{ dog.name }}</h3>
+    <small> <a href="{% url 'dogs_app:edit-dog' dog.id %}">edit dog</a></small>
+{% endblock page_header %}
+{% block content %}
+<div>
+    <p><b>Sex: </b>{{dog.sex}}</p>
+    <p><b>Color: </b>{{dog.color}}</p>
+    <p><b>Genetics: </b>{{colorString}}</p>
+</div>
+<h5>Litters</h5>
+<div class="row">
+    {% for litter in litters %}
+        <div class="col-md-3 " style="margin-bottom:10px;">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="{% url 'dogs_app:litter' litter.id %}">Litter #{{ litter.id }} with {{litter.partner.name}}</a>
+                    </h4>
+                    <div class="card-subtitle">
+                        Bred By: <a href="{% url 'hightrial:profile' litter.breeder.id %}">{{ litter.breeder.username }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <p>This dog has not had any litters yet.</p>
+    {% endfor %}
+</div>
+    
+{% endblock content %}

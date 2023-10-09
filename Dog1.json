@@ -1,0 +1,17 @@
+{
+    "name": "Lirai",
+    "kennel": "Rhythm Kennel",
+    "sex": "Male",
+    "breed": "Pumi",
+    "color": "White",
+    "genetics": {
+        "colorGenetics": {
+            "k": "KB/KB",
+            "a": "ay/ay",
+            "e": "e/e",
+            "b": "B/B",
+            "d": "D/D"
+        },
+        "traitGenetics": null
+    }
+}

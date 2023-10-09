@@ -1,0 +1,80 @@
+{
+    "model": "hightrial.breed",
+    "pk": 2,
+    "fields": {
+        "breedName": "Labrador Retriever",
+        "colorGeneticFlags": {
+            "e": {
+                "e": 70,
+                "E": 50
+            },
+            "b": {
+                "B": 60,
+                "b": 40
+            },
+            "d": {
+                "D": 100,
+                "d": 0
+            }
+        },
+        "traitGeneticFlags": null,
+        "nonFoundations": null,
+        "phenotypeNames": {
+            "k": {
+                "ky": null,
+                "kbr": null
+            },
+            "a": {
+                "ay": null,
+                "at": null,
+                "a": null
+            },
+            "d": {
+                "D": null,
+                "d": null
+            },
+            "e": {
+                "e": "Yellow",
+                "Em": null
+            },
+            "b": {
+                "B": "Black",
+                "b": "Chocolate"
+            },
+            "m":{
+                "M": null
+            },
+            "s":{
+                "Sp": null
+            },
+            "joints": {
+                "e/b": "Yellow"
+            }
+        },
+        "dominanceValues": {
+            "k": [
+                "KB",
+                "kbr",
+                "ky"
+            ],
+            "a": [
+                "at",
+                "ay",
+                "a"
+            ],
+            "e": [
+                "E",
+                "Em",
+                "e"
+            ],
+            "b": [
+                "B",
+                "b"
+            ],
+            "d": [
+                "D",
+                "d"
+            ]
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Bella",
+    "kennel": "Rhythm Kennel",
+    "sex": "Female",
+    "breed": "Pumi",
+    "color": "Grey ",
+    "genetics": {
+        "colorGenetics": {
+            "k": "KB/KB",
+            "a": "at/ay",
+            "e": "E/e",
+            "b": "B/b",
+            "d": "D/D"
+        },
+        "traitGenetics": null
+    }
+}

@@ -1,0 +1,24 @@
+{% extends 'dogs/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h4>Dogs</h4>
+    <div class="row">
+        {% for dog in dogs %}
+            <div class="col-md-3 " style="margin-bottom:10px;">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="{% url 'dogs_app:dog' dog.id %}">{{ dog.name }}</a>
+                        </h4>
+                        <div class="card-subtitle">
+                            Owned By: <a href="{% url 'hightrial:profile' dog.owner.id %}">{{ dog.owner }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>There are no dogs in the system yet.</p>
+        {% endfor %}
+    </div>
+{% endblock content %}

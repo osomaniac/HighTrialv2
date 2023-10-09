@@ -1,0 +1,52 @@
+{% load django_bootstrap5 %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1,
+   shrink-to-fit=no">
+   <title>High Trial</title>
+   {% bootstrap_css %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
+ 
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'hightrial:index'%}">
+                        Home</a>
+                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dogs_app:dogs'%}">
+                        Explore Dogs</a>
+                 </li>
+                 <li>
+                    <a class="nav-link" href="{% url 'dogs_app:breed-dogs'%}">
+                        Breed</a>
+                 </li>
+            </ul>
+        </div>
+        <span class="navbar-text">
+            {% if user.is_authenticated %}
+                Hi, <a href="{% url 'hightrial:profile' user.id %}">{{ user.username }}</a>!  |  <a href="/accounts/logout">Log Out</a>  
+                {% else %}
+                <a href="{% url 'hightrial:login' %}">Log In</a>  |  <a href="/signup">Sign Up</a>  
+            {% endif %}
+        </span>
+    </nav>
+   <main role="main" class="container">
+    <div class="pb-2 mb-2 border-bottom">
+        {% block page_header %} {% endblock page_header %}
+    </div>
+       <div>
+           {% block content %}{% endblock content %}
+       </div>
+   </main>
+</body>
+</html>

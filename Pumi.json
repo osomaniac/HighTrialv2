@@ -1,0 +1,111 @@
+{
+    "model": "hightrial.breed",
+    "pk": 1,
+    "fields": {
+        "breedName": "Pumi",
+        "colorGeneticFlags": {
+            "k": {
+                "KB": 45,
+                "ky": 50,
+                "kbr": 5
+            },
+            "a": {
+                "ay": 40,
+                "at": 50,
+                "a": 10
+            },
+            "e": {
+                "e": 20,
+                "E": 75,
+                "Em": 5
+            },
+            "b": {
+                "B": 80,
+                "b": 20
+            },
+            "d": {
+                "D": 90,
+                "d": 10
+            }
+        },
+        "traitGeneticFlags": null,
+        "nonFoundations": {
+            "k": [
+                "kbr/kbr",
+                "kbr/ky"
+            ],
+            "b": [
+                "b/b"
+            ],
+            "d": [
+                "d/d"
+            ],
+            "joint": {
+                "k/a": {
+                    "ky/ky": [
+                        "at/at",
+                        "a/at",
+                        "at/ay"
+                    ]
+                }
+            }
+        },
+        "phenotypeNames": {
+            "k": {
+                "ky": "seeA",
+                "kbr": "Brindle"
+            },
+            "a": {
+                "ay": "Sable",
+                "at": "Tan Points",
+                "a": "Black"
+            },
+            "e": {
+                "e": "White",
+                "Em": "Masked"
+            },
+            "b": {
+                "B": "Grey",
+                "b": "Brown"
+            },
+            "d": {
+                "D": "Grey",
+                "d": "Grey-born"
+            },
+            "m":{
+                "M": null
+            },
+            "s":{
+                "Sp": null
+            },
+            "joints": {
+                "b/d": "Lilac"
+            }
+        },
+        "dominanceValues": {
+            "k": [
+                "KB",
+                "kbr",
+                "ky"
+            ],
+            "a": [
+                "at",
+                "ay",
+                "a"
+            ],
+            "e": [
+                "E",
+                "Em",
+                "e"
+            ],
+            "b": [
+                "B",
+                "b"
+            ],
+            "d": [
+                "D",
+                "d"
+            ]
+        }
+    }
+}

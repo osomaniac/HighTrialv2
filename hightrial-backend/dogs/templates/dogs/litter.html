@@ -1,0 +1,33 @@
+{% extends 'dogs/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h5><a href="{% url 'dogs_app:dog' dam.id %}">{{dam.name}}</a> x <a href="{% url 'dogs_app:dog' sire.id %}">{{sire.name}}</a></h5>
+    <b>Bred By: <a href="{% url 'hightrial:profile' breeder.id %}">{{ breeder.username }}</a></b>
+    <br>
+    <br>
+    <div class="row">
+        {% for puppy in puppies %}
+            <div class="col-md-3 " style="margin-bottom:10px;">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                           <a href="{% url 'dogs_app:dog' puppy.id %}">{{ puppy.name }}</a>
+                        </h4>
+                        <div class="card-subtitle">
+                            Breed: {{puppy.breed}}
+                        </div>
+                        <p class="card-text">
+                            Sex: {{puppy.sex}}
+                            <br>
+                            Color: {{puppy.color}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>This litter does not exist</p>
+        {% endfor %}
+    </div>
+    
+{% endblock content %}

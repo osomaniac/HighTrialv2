@@ -1,0 +1,24 @@
+{% extends 'dogs/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2>Welcome to {{username}}'s profile.</h2>
+    <b>Available Cash: ${{cash}}  |  Available Tickets: {{tickets}}</b>
+    <br><br>
+    <h4>{{username}}'s Dogs</h4>
+    <div class="row">
+        {% for dog in dogs %}
+            <div class="col-md-3 " style="margin-bottom:10px;">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="{% url 'dogs_app:dog' dog.id %}">{{ dog.name }}</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>There are no dogs in the system yet.</p>
+        {% endfor %}
+    </div>
+{% endblock content %}
